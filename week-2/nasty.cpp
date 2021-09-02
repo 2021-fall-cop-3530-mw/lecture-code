@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "function.cpp"
+#include "student.hpp"
 
 int main ()
 {
@@ -19,6 +20,8 @@ int main ()
 	std::cout << 20;
 	std::cout << std::endl;
 
+	Student s(1.8, "John", "Doe");
+	std::cout << s << "\n";
 	double student_1_gpa = 1.8;
 	std::string student_1_fname = "John";
 	std::string student_1_lname = "Doe";
