@@ -5,7 +5,7 @@ int Search::Find (int a[], int searchKey, int right)
 	int left = 0;
 	int middle;
 
-	while (right > left)
+	while (right >= left)
 	{
 		middle = (left + right) / 2;
 		if (searchKey < a[middle])
