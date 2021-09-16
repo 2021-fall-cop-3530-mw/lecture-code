@@ -595,3 +595,4 @@ node_test
 list_test
 test
 !test/
+test-search
