@@ -12,6 +12,9 @@ main: main.cpp linear-search.o binary-search.o
 clean:
 	$(RM) main *.o
 
+test-build: test-search.cpp search.o ../catch/catch.o
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
 test-search: test-search.cpp search.o ../catch/catch.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
 	./$@ --success

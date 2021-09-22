@@ -9,4 +9,5 @@ TEST_CASE("Search for existing element")
 	CHECK (0 == Search::Find(data, 7, 6));
 	CHECK (-1 == Search::Find(data, 4, 6));
 	CHECK (5 == Search::Find(data, 80, 6));
+	CHECK (-1 == Search::Find(data, 10, 6));
 }
