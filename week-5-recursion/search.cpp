@@ -21,13 +21,10 @@ int Search::RecursiveFind (int a[], int searchKey, int left, int right)
 	}
 	else if (searchKey < a[middle])
 	{
-		Search::RecursiveFind (a, searchKey, left, middle - 1);
+		return Search::RecursiveFind (a, searchKey, left, middle - 1);
 	}
 	else
 	{
-		Search::RecursiveFind (a, searchKey, middle + 1, right);
+		return Search::RecursiveFind (a, searchKey, middle + 1, right);
 	}
-
-
-	return -1;
 }
