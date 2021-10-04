@@ -6,7 +6,8 @@
 class Utils
 {
 	public:
-		static void Swap(std::vector<int>& data, size_t i, size_t j);
+		template <typename MyDataType>
+		static void Swap(std::vector<MyDataType>& data, size_t i, size_t j);
 };
 
 #endif /*UTILS_HPP*/
