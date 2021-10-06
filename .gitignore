@@ -594,6 +594,6 @@ in-class-code
 node_test
 list_test
 test-search
-**/test
+#**/test
 !**/test/*.cpp
 !**/test/catch
