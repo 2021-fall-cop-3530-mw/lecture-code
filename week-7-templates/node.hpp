@@ -4,8 +4,11 @@
 template <typename T>
 class Node
 {
+	private:
+		T payload;
 	public:
 		Node(T input);
+		T GetValue ();
 };
 
 #endif /*NODE_HPP*/
