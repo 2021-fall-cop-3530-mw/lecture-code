@@ -8,7 +8,7 @@ class Node
 		T payload;
 		Node<T>* next;
 	public:
-		Node(T input);
+		Node(T input, Node<T>* n = nullptr);
 		T GetValue ();
 		Node<T>* GetNext ();
 };
