@@ -22,4 +22,22 @@ void List<T>::InsertAtFront (T value)
 	this->front = newNode;
 }
 
+template <typename T>
+std::string List<T>::Print ()
+{
+	std::ostringstream out;
+	Node<T>* currentNode = this->front;
+	while (currentNode != nullptr)
+	{
+		out << currentNode->GetValue();
+		currentNode = currentNode->GetNext();
+		if (currentNode != nullptr)
+		{
+			out << ' ';
+		}
+	}
+
+	return out.str();
+}
+
 template class List<int>;
