@@ -13,6 +13,7 @@ class List
 		List ();
 		Node<T>* GetFront ();
 		void InsertAtFront (T value);
+		void DeleteFromFront ();
 		std::string Print ();
 		// run in Valgrind...what's missing?
 };

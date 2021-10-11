@@ -12,6 +12,16 @@ Node<T>* List<T>::GetFront ()
 	return this->front;
 }
 
+template <typename T>
+void List<T>::DeleteFromFront ()
+{
+	if (this->front != nullptr)
+	{
+		Node<T>* temp = this->front;
+		this->front = this->front->GetNext();
+		delete temp;
+	}
+}
 
 template <typename T>
 void List<T>::InsertAtFront (T value)

@@ -5,6 +5,8 @@
 TEST_CASE("Test List")
 {
 	List<int> l;
+	l.DeleteFromFront();
+
 	REQUIRE(nullptr == l.GetFront());
 	l.InsertAtFront(12);
 	REQUIRE(12 == l.GetFront()->GetValue());
@@ -14,4 +16,8 @@ TEST_CASE("Test List")
 	REQUIRE(12 == l.GetFront()->GetNext()->GetValue());
 
 	REQUIRE("14 12" == l.Print());
+
+	l.DeleteFromFront();
+	REQUIRE(12 == l.GetFront()->GetValue());
+	REQUIRE("12" == l.Print());
 }
