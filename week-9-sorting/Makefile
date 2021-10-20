@@ -9,6 +9,6 @@ CXXFLAGS  = -g -Wall -std=c++11
 clean:
 	$(RM) main *.o
 
-test-sort: test-sort.cpp insertion-sort.o ../catch/catch.o
+test-sort: test-sort.cpp merge-sort.o insertion-sort.o ../catch/catch.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
 	./$@ --success
