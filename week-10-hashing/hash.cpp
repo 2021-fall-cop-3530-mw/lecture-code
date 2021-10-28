@@ -24,7 +24,22 @@ int main ()
 		std::cout << "Element not in set" << std::endl;
 	}
 
-	//for (TYPE?? i = ids.begin(); i != ids.end(); ++i)
+	std::cout << "Printing all elements in the set (there are no duplicates).\n";
+	for (std::unordered_set<int>::iterator i = ids.begin(); i != ids.end(); ++i)
+	{
+		std::cout << *i << std::endl;
+	}
+
+	// If using C++ 11 or higher, can use auto type
+	std::cout << "Printing all elements in the set (using `auto` type for the iterator).\n";
+	for (auto i = ids.begin(); i != ids.end(); ++i)
+	{
+		std::cout << *i << std::endl;
+	}
+
+
+	// Or an even cleaner way
+	std::cout << "Printing all elements using for-each style looping.\n";
 	for (const int& id: ids)
 	{
 		std::cout << id << std::endl;
