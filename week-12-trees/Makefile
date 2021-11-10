@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall
+CXXFLAGS = -Wall -g
 test-node: test/test-node.cpp ../catch/catch.o node.o
 	$(CXX) $(CXXFLAGS) -o test/$@ $^
 	test/$@ --success

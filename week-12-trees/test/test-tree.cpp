@@ -12,4 +12,12 @@ TEST_CASE("Test Tree")
 	t.Insert(10);
 	REQUIRE(12 == t.GetRoot()->GetValue());
 	REQUIRE(10 == t.GetRoot()->GetLeft()->GetValue());
+
+	t.Insert(10);
+	t.Insert(25);
+	t.Insert(-124);
+	t.Insert(7);
+	t.Insert(-2);
+
+	REQUIRE("-124 -2 7 10 10 12 25 " == t.Print()); // sorted list of tree elements
 }

@@ -31,11 +31,39 @@ void Tree<T>::Insert (T data)
 				currentNode->SetLeft(new Node<T>(data));
 				return;
 			}
+			currentNode = currentNode->GetLeft();
 		}
 		else // go right
 		{
+			if (currentNode->GetRight() == nullptr)
+			{
+				currentNode->SetRight(new Node<T>(data));
+				return;
+			}
+			currentNode = currentNode->GetRight();
 		}
 	}
+}
+
+template <typename T>
+std::string Tree<T>::Print ()
+{
+	return this->Print(this->root);
+}
+
+template <typename T>
+std::string Tree<T>::Print (Node<T>* subtreeRoot)
+{
+	if (subtreeRoot == nullptr)
+	{
+		return "";
+	}
+	std::ostringstream out;
+	out << this->Print(subtreeRoot->GetLeft());
+	out << subtreeRoot->GetValue() << ' ';
+	out << this->Print(subtreeRoot->GetRight());
+
+	return out.str();
 }
 
 template class Tree<int>;
