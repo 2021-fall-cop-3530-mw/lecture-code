@@ -10,9 +10,11 @@ class Tree
 	private:
 		Node<T>* root;
 		std::string Print (Node<T>* subtreeRoot);
+		void DeleteSubtree(Node<T>* subtreeRoot);
 
 	public:
 		Tree ();
+		~Tree ();
 		Node<T>* GetRoot();
 		void Insert (T data);
 		std::string Print ();
