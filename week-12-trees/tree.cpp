@@ -84,4 +84,33 @@ void Tree<T>::DeleteSubtree(Node<T>* subtreeRoot)
 	delete subtreeRoot;
 }
 
+template <typename T>
+Node<T>* Tree<T>::Search (T searchKey)
+{
+	return this->Search(this->root, searchKey);
+}
+
+template <typename T>
+Node<T>* Tree<T>::Search (Node<T>* subtreeRoot, T searchKey)
+{
+	if (subtreeRoot == nullptr) // didn't find it
+	{
+		return nullptr;
+	}
+	else if (subtreeRoot->GetValue() == searchKey) // found it
+	{
+		return subtreeRoot;
+	}
+
+	if (searchKey < subtreeRoot->GetValue())
+	{
+		return this->Search(subtreeRoot->GetLeft(), searchKey);
+	}
+	else
+	{
+		return this->Search(subtreeRoot->GetRight(), searchKey);
+	}
+}
+
+
 template class Tree<int>;

@@ -20,4 +20,7 @@ TEST_CASE("Test Tree")
 	t.Insert(-2);
 
 	REQUIRE("-124 -2 7 10 10 12 25 " == t.Print()); // sorted list of tree elements
+
+	REQUIRE(nullptr == t.Search(1));
+	REQUIRE(7 == t.Search(7)->GetValue());
 }

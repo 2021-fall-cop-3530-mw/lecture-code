@@ -11,6 +11,7 @@ class Tree
 		Node<T>* root;
 		std::string Print (Node<T>* subtreeRoot);
 		void DeleteSubtree(Node<T>* subtreeRoot);
+		Node<T>* Search (Node<T>* subtreeRoot, T searchKey);
 
 	public:
 		Tree ();
@@ -18,6 +19,7 @@ class Tree
 		Node<T>* GetRoot();
 		void Insert (T data);
 		std::string Print ();
+		Node<T>* Search (T searchKey);
 };
 
 #endif /*TREE_HPP*/
