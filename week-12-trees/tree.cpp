@@ -18,6 +18,23 @@ void Tree<T>::Insert (T data)
 	if (this->root == nullptr)
 	{
 		this->root = new Node<T>(data);
+		return;
+	}
+
+	Node<T>* currentNode = this->root;
+	while (currentNode != nullptr)
+	{
+		if (data < currentNode->GetValue()) // go left
+		{
+			if (currentNode->GetLeft() == nullptr)
+			{
+				currentNode->SetLeft(new Node<T>(data));
+				return;
+			}
+		}
+		else // go right
+		{
+		}
 	}
 }
 
