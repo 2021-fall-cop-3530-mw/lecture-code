@@ -10,4 +10,10 @@ TEST_CASE("Test")
 	REQUIRE(0 == h.GetParent(1));
 	REQUIRE(4 == h.GetParent(10));
 	REQUIRE(4 == h.GetParent(9));
+
+	REQUIRE(5 == h.GetLeft(2));
+	REQUIRE(1 == h.GetLeft(0));
+
+	REQUIRE(2 == h.GetRight(0));
+	REQUIRE(6 == h.GetRight(2));
 }
