@@ -17,3 +17,13 @@ TEST_CASE("Test")
 	REQUIRE(2 == h.GetRight(0));
 	REQUIRE(6 == h.GetRight(2));
 }
+
+TEST_CASE ("Build heap")
+{
+	Heap h;
+	// h.Max(); // what is an invalid value?
+	h.Insert(12);
+	CHECK(12 == h.Max());
+	h.Insert(22);
+	CHECK(22 == h.Max());
+}
