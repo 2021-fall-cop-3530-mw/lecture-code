@@ -30,4 +30,15 @@ TEST_CASE ("Build heap")
 	h.Insert(-25);
 	h.Insert(22);
 	CHECK(24 == h.Max());
+
+	//heap is valid
+	h.Pop();
+	//heap is valid
+	CHECK(22 == h.Max());
+
+	h.Pop();
+	CHECK(22 == h.Max());
+
+	h.Pop();
+	CHECK(12 == h.Max());
 }
