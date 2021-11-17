@@ -26,4 +26,8 @@ TEST_CASE ("Build heap")
 	CHECK(12 == h.Max());
 	h.Insert(22);
 	CHECK(22 == h.Max());
+	h.Insert(24);
+	h.Insert(-25);
+	h.Insert(22);
+	CHECK(24 == h.Max());
 }

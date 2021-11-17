@@ -34,7 +34,10 @@ int Heap::Max ()
 
 void Heap::Percolate (int i)
 {
-
+	if (i <= 0)
+	{
+		return;
+	}
 	//missing base case
 	int parentIndex = this->GetParent(i);
 	if (this->data[i] > this->data[parentIndex]) // bigger than parent
